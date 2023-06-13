@@ -1,3 +1,5 @@
+//https://techademy.in/cognizantjrfse/account/landing
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegistrationServiceService } from 'src/app/services/registrationService/registration-service.service';
