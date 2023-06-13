@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <mat-grid-list cols="4" rowHeight="380px">
+        <div *ngFor="let movie of searchedMovies">
+            <mat-grid-tile>
+                <div class="card mt-3" style="width: 12rem;">
+                    <img src="assets/movie.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Movie : {{movie.id.movieName|uppercase}}</h3>
+                      <h3 class="card-title">Theatre : {{movie.id.theatreName|uppercase}}</h3>
+                      <button class="btn btn-primary" (click)=" bookTicket(movie.id.movieName,movie.id.theatreName)">Book Tickets</button>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </div>
+    </mat-grid-list>
+</div>
