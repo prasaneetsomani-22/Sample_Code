@@ -33,4 +33,13 @@ export class MovieBookingServiceService {
   searchMovies(query:any){
     return this.http.get(`${this.url}/movies/search/${query}`);
   }
+
+  deleteMovie(movieName:any,theatreName:any){
+    return this.http.delete(`${this.url}/delete/${movieName}/${theatreName}`,{responseType:'text'});
+  }
+
+  forgetPassword(user:any){
+    return this.http.post(`${this.url}/forgot`,user,{responseType:'text'});
+  }
+
 }

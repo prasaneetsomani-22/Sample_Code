@@ -14,6 +14,7 @@ import { BookTicketsComponent } from './components/book-tickets/book-tickets.com
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SearchMoviesComponent } from './components/search-movies/search-movies.
     BookTicketsComponent,
     AddMovieComponent,
     NavbarComponent,
-    SearchMoviesComponent
+    SearchMoviesComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,

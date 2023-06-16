@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { BookTicketsComponent } from './components/book-tickets/book-tickets.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
@@ -38,6 +39,12 @@ const routes: Routes = [
     component:SearchMoviesComponent,
     pathMatch:"full"
   }
+  ,{
+    path:"forgetPassword",
+    component:ForgetPasswordComponent,
+    pathMatch:"full"
+  }
+  
 ];
 
 @NgModule({
