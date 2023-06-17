@@ -7,32 +7,45 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
 import { ShowAllMoviesComponent } from './components/show-all-movies/show-all-movies.component';
+import { BackToLoginGuardGuard } from './interceptors/back-to-login-guard.guard';
+import { LoginGuardGuard } from './interceptors/login-guard.guard';
+import { RouteInterceptorGuard } from './interceptors/route-interceptor.guard';
 
 const routes: Routes = [
   {
     path:"",
-    component:LoginComponent,
-    pathMatch:"full"
-  },
-  {
-    path:"register",
-    component:RegisterComponent,
-    pathMatch:"full"
-  },
-  {
-    path:"showAllMovies",
     component:ShowAllMoviesComponent,
     pathMatch:"full"
   },
   {
+    path:"login",
+    component:LoginComponent,
+    pathMatch:"full",
+    canActivate:[BackToLoginGuardGuard]
+  },
+  {
+    path:"register",
+    component:RegisterComponent,
+    pathMatch:"full",
+    canActivate:[BackToLoginGuardGuard]
+  },
+  // {
+  //   path:"showAllMovies",
+  //   component:ShowAllMoviesComponent,
+  //   pathMatch:"full",
+  //   canActivate:[LoginGuardGuard]
+  // },
+  {
     path:"bookTicket/:movieName/:theatreName",
     component:BookTicketsComponent,
-    pathMatch:"full"
+    pathMatch:"full",
+    canActivate:[LoginGuardGuard]
   },
   {
     path:"addMovie",
     component:AddMovieComponent,
-    pathMatch:"full"
+    pathMatch:"full",
+    canActivate:[LoginGuardGuard,RouteInterceptorGuard]
   }
   ,{
     path:"search/movies/:query",
@@ -42,7 +55,8 @@ const routes: Routes = [
   ,{
     path:"forgetPassword",
     component:ForgetPasswordComponent,
-    pathMatch:"full"
+    pathMatch:"full",
+    canActivate:[BackToLoginGuardGuard]
   }
   
 ];

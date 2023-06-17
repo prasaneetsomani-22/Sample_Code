@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
      this.service.login(this.credentials).subscribe((response)=>{
       if(response!="SomeThing went Wrong"){
         localStorage.setItem('user',response.toString());
-        this.route.navigate([`/showAllMovies`]).then(()=>{
+        this.route.navigate([`/`]).then(()=>{
           window.location.reload();
         });
 
