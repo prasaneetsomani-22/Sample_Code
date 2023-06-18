@@ -21,3 +21,4 @@ describe('SearchMoviesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

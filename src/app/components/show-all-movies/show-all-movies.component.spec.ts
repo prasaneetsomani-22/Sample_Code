@@ -21,3 +21,4 @@ describe('ShowAllMoviesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

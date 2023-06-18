@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   constructor(private service:MovieBookingServiceService,private route:Router) { }
   isfailure = false;
   credentials={
-    "email":null,
+    "email":null as string | null,
     "password":"",
   };
 

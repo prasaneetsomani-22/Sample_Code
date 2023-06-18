@@ -17,7 +17,7 @@ export class AddMovieComponent implements OnInit {
       movieName:"",
       theatreName:""
     },
-    allotedSeats:null,
+    allotedSeats:null as number | null,
   }
 
   ngOnInit(): void {
